@@ -1,3 +1,5 @@
+![OpenPNP Logo](https://raw.githubusercontent.com/openpnp/openpnp-logo/develop/logo_small.png)
+
 # OpenPnP
 
 Open Source SMT Pick and Place Hardware and Software
@@ -11,8 +13,7 @@ to build and own a fully functional SMT pick and place machine for under $1000.
 
 ## Project Status
 
-Overall, the project is in an alpha state. This means that it’s under heavy development but it is
-usable enough to start working with. See the [Downloads](http://openpnp.org/downloads) page to get started.
+OpenPnP is stable and in wide use. It is still under heavy development and new features are added continuously. See the [Downloads](http://openpnp.org/downloads) page to get started.
 
 If you would like to keep up with our progress you can
 [Watch this project on GitHub](http://github.com/openpnp/openpnp), check out
@@ -23,6 +24,11 @@ you can [use this web based one](http://webchat.freenode.net/?channels=openpnp)
 ## Contributing
 
 [![Build Status](https://travis-ci.org/openpnp/openpnp.svg?branch=develop)](https://travis-ci.org/openpnp/openpnp)
+[![Help Wanted](https://img.shields.io/github/issues-raw/openpnp/openpnp/help-wanted.svg?label=help-wanted&colorB=5319e7)](https://github.com/openpnp/openpnp/labels/help-wanted)
+[![Bugs](https://img.shields.io/github/issues-raw/openpnp/openpnp/bug.svg?label=bugs&colorB=D9472F)](https://github.com/openpnp/openpnp/labels/bug)
+[![Feature Requests](https://img.shields.io/github/issues-raw/openpnp/openpnp/feature-request.svg?label=feature-requests&colorB=bfd4f2)](https://github.com/openpnp/openpnp/labels/feature-request)
+[![Enhancements](https://img.shields.io/github/issues-raw/openpnp/openpnp/enhancement.svg?label=enhancements&colorB=0052cc)](https://github.com/openpnp/openpnp/labels/enhancement)
+
 
 Before starting work on a pull request, please read: https://github.com/openpnp/openpnp/wiki/Developers-Guide#contributing
 

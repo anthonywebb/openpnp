@@ -32,34 +32,31 @@ public class VisionUtilsTest {
     }
 
     static class TestCamera implements Camera {
+        protected Head head;
+
         @Override
         public String getId() {
-            // TODO Auto-generated method stub
             return null;
         }
 
         @Override
         public Head getHead() {
-            // TODO Auto-generated method stub
-            return null;
+            return head;
         }
 
         @Override
         public void setHead(Head head) {
-            // TODO Auto-generated method stub
-            
+            this.head = head;
         }
 
         @Override
         public void moveTo(Location location, double speed) throws Exception {
-            // TODO Auto-generated method stub
-            
+
         }
 
         @Override
         public void moveToSafeZ(double speed) throws Exception {
-            // TODO Auto-generated method stub
-            
+
         }
 
         @Override
@@ -69,56 +66,47 @@ public class VisionUtilsTest {
 
         @Override
         public Wizard getConfigurationWizard() {
-            // TODO Auto-generated method stub
             return null;
         }
 
         @Override
         public String getPropertySheetHolderTitle() {
-            // TODO Auto-generated method stub
             return null;
         }
 
         @Override
         public PropertySheetHolder[] getChildPropertySheetHolders() {
-            // TODO Auto-generated method stub
             return null;
         }
 
         @Override
         public PropertySheet[] getPropertySheets() {
-            // TODO Auto-generated method stub
             return null;
         }
 
         @Override
         public Action[] getPropertySheetHolderActions() {
-            // TODO Auto-generated method stub
             return null;
         }
 
         @Override
         public String getName() {
-            // TODO Auto-generated method stub
             return null;
         }
 
         @Override
         public void setName(String name) {
-            // TODO Auto-generated method stub
-            
+
         }
 
         @Override
         public Looking getLooking() {
-            // TODO Auto-generated method stub
             return null;
         }
 
         @Override
         public void setLooking(Looking looking) {
-            // TODO Auto-generated method stub
-            
+
         }
 
         @Override
@@ -128,38 +116,31 @@ public class VisionUtilsTest {
 
         @Override
         public void setUnitsPerPixel(Location unitsPerPixel) {
-            // TODO Auto-generated method stub
-            
+
         }
 
         @Override
         public BufferedImage capture() {
-            // TODO Auto-generated method stub
             return null;
         }
 
         @Override
-        public void startContinuousCapture(CameraListener listener,
-                int maximumFps) {
-            // TODO Auto-generated method stub
-            
+        public void startContinuousCapture(CameraListener listener, int maximumFps) {
+
         }
 
         @Override
         public void stopContinuousCapture(CameraListener listener) {
-            // TODO Auto-generated method stub
-            
+
         }
 
         @Override
         public void setVisionProvider(VisionProvider visionProvider) {
-            // TODO Auto-generated method stub
-            
+
         }
 
         @Override
         public VisionProvider getVisionProvider() {
-            // TODO Auto-generated method stub
             return null;
         }
 
@@ -175,32 +156,37 @@ public class VisionUtilsTest {
 
         @Override
         public Icon getPropertySheetHolderIcon() {
-            // TODO Auto-generated method stub
             return null;
         }
 
         @Override
         public void close() throws IOException {
-            // TODO Auto-generated method stub
-            
+
         }
 
-		@Override
-		public BufferedImage settleAndCapture() {
-			// TODO Auto-generated method stub
-			return null;
-		}
+        @Override
+        public BufferedImage settleAndCapture() {
+            return null;
+        }
 
-		@Override
-		public long getSettleTimeMs() {
-			// TODO Auto-generated method stub
-			return 0;
-		}
+        @Override
+        public long getSettleTimeMs() {
+            return 0;
+        }
 
-		@Override
-		public void setSettleTimeMs(long settleTimeMs) {
-			// TODO Auto-generated method stub
-			
-		}
+        @Override
+        public void setSettleTimeMs(long settleTimeMs) {
+
+        }
+
+        @Override
+        public void moveTo(Location location) throws Exception {
+            moveTo(location, getHead().getMachine().getSpeed());
+        }
+
+        @Override
+        public void moveToSafeZ() throws Exception {
+            moveToSafeZ(getHead().getMachine().getSpeed());
+        }
     }
 }
