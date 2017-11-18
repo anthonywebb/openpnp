@@ -52,7 +52,7 @@ import org.simpleframework.xml.core.Commit;
 import com.google.common.base.Joiner;
 
 @Root
-public class GcodeDriver extends AbstractSerialPortDriver implements Named, Runnable {
+public class GcodeDriver extends AbstractTcpDriver implements Named, Runnable {
     public enum CommandType {
         COMMAND_CONFIRM_REGEX,
         POSITION_REPORT_REGEX,
@@ -966,7 +966,7 @@ public class GcodeDriver extends AbstractSerialPortDriver implements Named, Runn
                 new PropertySheetWizardAdapter(new GcodeDriverGcodes(this), "Gcode"),
                 new PropertySheetWizardAdapter(new GcodeDriverSettings(this), "General Settings"),
                 new PropertySheetWizardAdapter(new GcodeDriverConsole(this), "Console"),
-                new PropertySheetWizardAdapter(super.getConfigurationWizard(), "Serial")
+                new PropertySheetWizardAdapter(super.getConfigurationWizard(), "Connection")
         };
     }
     
