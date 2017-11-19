@@ -74,9 +74,21 @@ public abstract class AbstractTcpDriver extends AbstractModelObject implements R
      * @throws IOException
      */
     protected String readLine() throws TimeoutException, IOException {
+        StringBuffer line = new StringBuffer();
         while (true) {
             try {
-                return input.readLine();
+                int ch = input.read();
+                if (ch == -1) {
+                    return null;
+                }
+                else if (ch == '\n' || ch == '\r') {
+                    if (line.length() > 0) {
+                        return line.toString();
+                    }
+                }
+                else {
+                    line.append((char) ch);
+                }
             }
             catch (IOException ex) {
                 if (ex.getCause() instanceof SocketTimeoutException) {
